@@ -1,5 +1,3 @@
-# NAME: Ramesh krishnan
-# REG NO: 212224220076
 # Linux-IPC--Pipes
 Linux-IPC-Pipes
 
@@ -20,14 +18,10 @@ Navigate to any Linux environment installed on the system or installed inside a 
 Write the C Program using Linux Process API - pipe(), fifo()
 
 ### Step 3:
-
 Testing the C Program for the desired output. 
-
 # PROGRAM:
-
 ## C Program that illustrate communication between two process using unnamed pipes using Linux API system calls
-```c
-#include<stdio.h>
+```
 #include<stdlib.h>
 #include<sys/types.h> 
 #include<sys/stat.h> 
@@ -54,7 +48,6 @@ client(p1[1],p2[0]);
 wait(waits); 
 return 0; 
 } 
-
 void server(int rfd,int wfd) 
 { 
 int i,j,n; 
@@ -82,18 +75,13 @@ n=read(rfd,buff,2000);
 buff[n]='\0';
 printf("THE RESULTS OF CLIENTS ARE ...... \n"); write(1,buff,n);
 }
-
 ```
+## OUTPUT
+![Exno 4 a](https://github.com/ramya23000505/Linux-IPC-Pipes/assets/149370791/8fc229bf-4b71-4e63-9dea-d7464fcbe975)
 
-
-
-
-![image](https://github.com/PYNAMVINODH/Linux-IPC-Pipes/assets/145742678/4f7a118b-d024-4acb-a2c0-8cd072d426ce)
 
 ## C Program that illustrate communication between two process using named pipes using Linux API system calls
-
-```c
-
+```
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -104,13 +92,10 @@ int res = mkfifo("/tmp/my_fifo", 0777);
 if (res == 0) printf("FIFO created\n");
 exit(EXIT_SUCCESS);
 }
-
-
 ```
-
-
-
 ## OUTPUT
-![image](https://github.com/PYNAMVINODH/Linux-IPC-Pipes/assets/145742678/a0832b8c-5291-43ac-91f4-93bb028e0f69)
+![Exno 4 b](https://github.com/ramya23000505/Linux-IPC-Pipes/assets/149370791/428f61b1-9ecd-4853-98b5-cdf4e9f48988)
+
+
 # RESULT:
-The program has been executed successfully.
+The program is executed successfully.
